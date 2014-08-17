@@ -11,11 +11,11 @@ docker pull andredumas/github-pages
 Standard usage:
 
 ```
-docker run -rm -v /vagrant:/site -p 4000:4000 andredumas/github-pages serve --watch
+docker run --rm -v /mysite:/site -p 4000:4000 andredumas/github-pages serve --watch
 ```
 
 Usage within Vagrant due to [this](http://stackoverflow.com/questions/19822319/jekyll-regeneration-doesnt-work-inside-vagrant) issue
 
 ```
-docker run -rm -v /vagrant:/site -p 4000:4000 andredumas/github-pages serve --watch --force_polling
+docker run --rm -v /vagrant:/site -p 4000:4000 andredumas/github-pages serve --watch --force_polling
 ```
